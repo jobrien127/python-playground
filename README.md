@@ -11,6 +11,7 @@ This repository contains implementations of various machine learning algorithms 
 │   ├── logistic_regression.py
 │   ├── neural_network.py
 │   ├── decision_tree.py
+│   ├── svm.py
 │   └── README.md
 ├── unsupervised_learning/
 │   ├── kmeans.py
@@ -27,6 +28,7 @@ This repository contains implementations of various machine learning algorithms 
 - Logistic Regression (binary classification)
 - Neural Network (multi-layer with backpropagation)
 - Decision Tree (with Gini impurity)
+- Support Vector Machine (with gradient descent)
 
 ### Unsupervised Learning
 - K-Means Clustering

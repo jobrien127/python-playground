@@ -42,6 +42,16 @@ Decision Tree classifier with Gini impurity criterion.
   - Maximum depth control
   - Decision boundary visualization
 
+### Support Vector Machine (`svm.py`)
+SVM classifier using gradient descent optimization.
+- Features:
+  - Hinge loss with L2 regularization
+  - Support vector identification
+  - Decision boundary visualization
+  - Training history tracking
+  - Configurable learning rate and regularization
+  - Support vector highlighting in plots
+
 ## Usage
 
 Each model follows a similar API pattern:
