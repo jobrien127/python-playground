@@ -1,6 +1,6 @@
 # Supervised Learning Models
 
-This directory contains implementations of various supervised learning algorithms from scratch using NumPy. Each implementation includes detailed documentation, example usage, and visualization capabilities.
+This directory contains implementations of various supervised learning algorithms from scratch using NumPy and PyTorch. Each implementation includes detailed documentation, example usage, and visualization capabilities.
 
 ## Models
 
@@ -52,6 +52,16 @@ SVM classifier using gradient descent optimization.
   - Configurable learning rate and regularization
   - Support vector highlighting in plots
 
+### Image Classification (`image_classification/`)
+Deep learning models for image classification tasks.
+- Features:
+  - CNN implementations using PyTorch
+  - MNIST digit classification
+  - Training and evaluation pipelines
+  - Model checkpointing
+  - Training visualization
+  - Device-agnostic training (CPU/GPU)
+
 ## Usage
 
 Each model follows a similar API pattern:
@@ -68,6 +78,8 @@ See individual model files for specific usage examples and parameters.
 ## Requirements
 - NumPy
 - Matplotlib (for visualization)
+- PyTorch (for image classification models)
+- torchvision (for image classification models)
 
 ## Testing
 Each model includes a `__main__` block with example usage and testing code. Run any model file directly to see it in action:

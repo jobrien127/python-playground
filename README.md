@@ -1,6 +1,6 @@
 # Machine Learning From Scratch
 
-This repository contains implementations of various machine learning algorithms from scratch using NumPy. The goal is to provide clear, well-documented implementations that help understand the underlying mechanics of these algorithms.
+This repository contains implementations of various machine learning algorithms from scratch using NumPy and PyTorch. The goal is to provide clear, well-documented implementations that help understand the underlying mechanics of these algorithms.
 
 ## Project Structure
 
@@ -12,6 +12,12 @@ This repository contains implementations of various machine learning algorithms 
 │   ├── neural_network.py
 │   ├── decision_tree.py
 │   ├── svm.py
+│   ├── image_classification/
+│   │   ├── mnist/
+│   │   │   ├── mnist_classifier.py
+│   │   │   ├── mnist_classifier.pth
+│   │   │   └── training_results.png
+│   │   └── README.md
 │   └── README.md
 ├── unsupervised_learning/
 │   ├── kmeans.py
@@ -29,13 +35,15 @@ This repository contains implementations of various machine learning algorithms 
 - Neural Network (multi-layer with backpropagation)
 - Decision Tree (with Gini impurity)
 - Support Vector Machine (with gradient descent)
+- Image Classification (CNN for MNIST)
 
 ### Unsupervised Learning
 - K-Means Clustering
 - Principal Component Analysis (PCA)
 
 ## Features
-- Pure NumPy implementations
+- Pure NumPy implementations for basic algorithms
+- PyTorch implementations for deep learning
 - Detailed documentation and type hints
 - Visualization capabilities
 - Example usage with synthetic datasets
@@ -47,6 +55,8 @@ All implementations use minimal dependencies:
 ```
 numpy>=1.24.0
 matplotlib>=3.8.0
+torch>=2.1.0
+torchvision>=0.16.0
 ```
 
 ## Installation
@@ -71,15 +81,14 @@ pip install -r requirements.txt
 Each model can be used independently. Here's a general pattern:
 
 ```python
-# Import the model
+# For NumPy-based models
 from supervised_learning.linear_regression import LinearRegression
-
-# Create and train the model
 model = LinearRegression(learning_rate=0.01, n_iterations=1000)
 model.fit(X_train, y_train)
-
-# Make predictions
 predictions = model.predict(X_test)
+
+# For PyTorch-based models
+python supervised_learning/image_classification/mnist/mnist_classifier.py
 ```
 
 See individual model directories for specific examples and documentation.
@@ -88,7 +97,11 @@ See individual model directories for specific examples and documentation.
 Each model includes a `__main__` block with example usage. To test a model:
 
 ```bash
+# For NumPy-based models
 python supervised_learning/linear_regression.py
+
+# For PyTorch-based models
+python supervised_learning/image_classification/mnist/mnist_classifier.py
 ```
 
 ## Contributing
@@ -100,4 +113,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Acknowledgments
 - These implementations are meant for educational purposes
 - Inspired by various machine learning textbooks and courses
-- Thanks to the NumPy and Matplotlib teams for their excellent libraries 
+- Thanks to the NumPy, PyTorch, and Matplotlib teams for their excellent libraries 
