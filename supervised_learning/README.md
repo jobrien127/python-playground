@@ -1,0 +1,67 @@
+# Supervised Learning Models
+
+This directory contains implementations of various supervised learning algorithms from scratch using NumPy. Each implementation includes detailed documentation, example usage, and visualization capabilities.
+
+## Models
+
+### Linear Regression (`linear_regression.py`)
+A from-scratch implementation of Linear Regression using gradient descent optimization.
+- Features:
+  - Mean Squared Error (MSE) loss function
+  - Batch gradient descent optimization
+  - Learning rate and iteration control
+  - Training history tracking
+  - Parameter inspection methods
+
+### Logistic Regression (`logistic_regression.py`)
+Binary classification model implemented using gradient descent optimization.
+- Features:
+  - Binary Cross-Entropy loss function
+  - Sigmoid activation function
+  - Probability predictions
+  - Configurable classification threshold
+  - Training history tracking
+
+### Neural Network (`neural_network.py`)
+A flexible neural network implementation supporting multiple layers.
+- Features:
+  - Configurable layer sizes
+  - ReLU and Sigmoid activation functions
+  - Binary Cross-Entropy loss
+  - Backpropagation implementation
+  - Training history visualization
+  - Example XOR problem solution
+
+### Decision Tree (`decision_tree.py`)
+Decision Tree classifier with Gini impurity criterion.
+- Features:
+  - Recursive tree construction
+  - Gini impurity splitting criterion
+  - Information gain calculation
+  - Feature importance computation
+  - Maximum depth control
+  - Decision boundary visualization
+
+## Usage
+
+Each model follows a similar API pattern:
+
+```python
+# Example usage pattern
+model = ModelClass(parameters)
+model.fit(X_train, y_train)
+predictions = model.predict(X_test)
+```
+
+See individual model files for specific usage examples and parameters.
+
+## Requirements
+- NumPy
+- Matplotlib (for visualization)
+
+## Testing
+Each model includes a `__main__` block with example usage and testing code. Run any model file directly to see it in action:
+
+```bash
+python model_name.py
+``` 
